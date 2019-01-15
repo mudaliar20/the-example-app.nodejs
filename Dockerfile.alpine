@@ -1,0 +1,19 @@
+FROM node:8-alpine
+MAINTAINER Shudarshon Chaki, sdrsn.chaki@gmail.com
+
+WORKDIR /app
+
+# Install app dependencies
+COPY package.json .
+
+RUN npm set progress=false && \
+    npm install -s --no-progress && \
+    npm cache clean --force && \
+    rm -rf /tmp/*
+
+# Bundle app source
+COPY . .
+
+USER node
+EXPOSE 3000
+CMD ["npm", "run", "start:dev"]
