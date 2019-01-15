@@ -1,15 +1,21 @@
-FROM node:9
+FROM node:carbon AS base
+MAINTAINER Shudarshon Chaki, sdrsn.chaki@gmail.com
 
 WORKDIR /app
 
-RUN npm install -g contentful-cli
+COPY package.json ./
+RUN npm set progress=false && \
+    npm install -s --no-progress && \
+    npm cache clean --force && \
+    rm -rf /tmp/*
 
-COPY package.json .
-RUN npm install
+FROM node:8.9-alpine AS release
 
-COPY . .
+WORKDIR /app
+
+COPY --from=base /app/node_modules /app/node_modules
+COPY . /app
 
 USER node
 EXPOSE 3000
-
 CMD ["npm", "run", "start:dev"]
