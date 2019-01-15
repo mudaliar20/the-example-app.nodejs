@@ -1,2 +1,9 @@
 node_modules
 npm-debug.log
+.dockerignore
+.git
+.circleci
+.gitignore
+Dockerfile*
+LICENSE
+README.md
