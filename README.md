@@ -1,6 +1,7 @@
 ## The node.js example app
 
 [![CircleCI](https://img.shields.io/circleci/project/github/contentful/the-example-app.nodejs.svg)](https://circleci.com/gh/contentful/the-example-app.nodejs)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmudaliar20%2Fthe-example-app.nodejs.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmudaliar20%2Fthe-example-app.nodejs?ref=badge_shield)
 
 The node.js example app teaches the very basics of how to work with Contentful:
 
@@ -122,3 +123,7 @@ docker run -p 3000:3000 \
   -e CONTENTFUL_PREVIEW_TOKEN=<PREVIEW_ACCESS_TOKEN> \
   -d the-example-app.nodejs
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmudaliar20%2Fthe-example-app.nodejs.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmudaliar20%2Fthe-example-app.nodejs?ref=badge_large)
